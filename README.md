@@ -1,89 +1,54 @@
 # rtntnrtnffdf
 
-A fullstack web application built with Next.js and NestJS.
+A Next.js fullstack application with NestJS API routes, Tailwind CSS, Shadcn UI, and PostgreSQL.
 
-## Tech Stack
+## Setup
 
-- **Frontend:** Next.js (App Router)
-- **Backend:** NestJS (API routes within Next.js)
-- **UI Libraries:** Tailwind CSS, shadcn/ui
-- **Database:** PostgreSQL
-- **Language:** TypeScript
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository-url>
+    cd rtntnrtnffdf
+    ```
 
-## Setup and Installation
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-### Prerequisites
+3.  **Set up environment variables:**
+    Create a `.env` file in the root of the project and populate it with your database credentials and application URL. Use the `.env.example` file as a template.
+    ```bash
+    cp .env.example .env
+    ```
+    Edit the `.env` file with your specific values, especially `DATABASE_URL`.
 
-- Node.js (v18 or later recommended)
-- npm or yarn
-- PostgreSQL database
-
-### Cloning the Repository
-
-```bash
-git clone <repository-url>
-cd rtntnrtnffdf
-```
-
-### Environment Variables
-
-1. Create a `.env` file in the root of the project by copying the `.env.example` file:
-
-   ```bash
-   cp .env.example .env
-   ```
-
-2. Edit the `.env` file and fill in your PostgreSQL connection details and other required environment variables.
-
-### Installing Dependencies
-
-Using npm:
-
-```bash
-npm install
-```
-
-Using yarn:
-
-```bash
-yarn install
-```
+4.  **Set up PostgreSQL:**
+    Ensure you have a PostgreSQL database running and accessible. The `DATABASE_URL` in your `.env` file should point to it.
 
 ## Running Locally
 
-### Starting the Development Server
+1.  **Start the development server:**
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
 
-This command will start both the Next.js frontend and the NestJS backend (which runs as API routes within Next.js).
-
-Using npm:
-
-```bash
-npm run dev
-```
-
-Using yarn:
-
-```bash
-yarn dev
-```
-
-The application will be available at `http://localhost:3000`.
-
-### Database Migrations (if applicable)
-
-(Add instructions for database migrations if you implement a migration tool like Prisma or TypeORM)
+    The application will be available at `http://localhost:3000`.
 
 ## Project Structure
 
-- `src/app/`: Next.js App Router routes and UI components.
-  - `src/app/api/`: NestJS API routes.
-- `src/lib/`: Shared utilities, database clients, etc.
-- `public/`: Static assets.
+-   `src/app/`: Next.js App Router for frontend and API routes.
+    -   `src/app/api/`: NestJS API routes.
+-   `src/lib/`: Shared utilities, including database clients.
+-   `public/`: Static assets.
+-   `components/`: Reusable UI components (managed by Shadcn UI).
 
-## Contributing
+## Dependencies
 
-(Add contribution guidelines here)
-
-## License
-
-(Specify your project's license here)
+-   **Frontend:** Next.js, React, Tailwind CSS, Shadcn UI
+-   **Backend:** NestJS
+-   **Database:** PostgreSQL (via Prisma)
+-   **Language:** TypeScript
